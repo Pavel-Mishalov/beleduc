@@ -1,0 +1,85 @@
+.navigation {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+
+	&--item {
+		font-size: 1.3rem;
+		font-weight: 700;
+		line-height: 1.6rem;
+		color: #FFFFFF;
+		padding: 1rem 1.85rem;
+		text-decoration: none;
+		position: relative;
+		transition: color 250ms ease-out;
+
+		u {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			font-size: 0.385em;
+			width: 0;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow: hidden;
+			transition: width 250ms ease-out, left 250ms ease-out;
+
+			@for $i from 1 through 20 {
+				svg:nth-child(#{$i}) {
+					left: -0.35 * ($i - 1) * 1em;
+				}
+			}
+
+			svg {
+				height: 1em;
+				position: relative;
+				flex-shrink: 0;
+				color: #FFDD00;
+			}
+		}
+
+		&:hover,
+		&.--active {
+			color: #FFDD00;
+
+			u {
+				left: 1.85rem;
+				width: calc(100% - 3.7rem);
+			}
+		}
+	}
+
+	&--separator {
+		width: 2rem;
+		height: 0.5rem;
+		color: #FFDD00;
+
+		svg	{
+			display: block;
+		}
+	}
+}
+
+@media screen and (max-width: 1092px) {
+	.navigation {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 910px) {
+	.navigation {
+		&--item {
+			padding: 1rem;
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.navigation {
+		display: none;
+	}
+}
+

@@ -1,0 +1,118 @@
+.contacts {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+
+	&--company-number {
+		margin-right: 3.7rem;
+	}
+
+	&--company-address {
+		margin-right: 3.7rem;
+	}
+
+	&--company-call {
+	}
+}
+
+@media screen and (max-width: 683px) {
+	.contacts {
+		flex-direction: column;
+		height: 10rem;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.company-number {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1.6rem;
+
+	svg {
+		color: #FFDD00;
+		width: 1em;
+		height: 1em;
+		margin-right: 0.6875em;
+	}
+
+	a {
+		text-decoration: none;
+		font-size: 1em;
+		font-weight: 900;
+		line-height: 1.1875;
+		letter-spacing: 0.05em;
+		color: #FFFFFF;
+	}
+}
+
+.company-address {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1.3rem;
+
+	svg {
+		color: #FFDD00;
+		width: 1.7em;
+		height: 1.7em;
+		margin-right: 0.6875em;
+	}
+
+	p {
+		font-size: 1em;
+		line-height: 1.2;
+		color: #FFFFFF;
+		max-width: 12em;
+
+		.--color {
+			color: #FFDD00;
+		}
+	}
+}
+
+.company-call {
+	font-size: 1.4rem;
+
+	p {
+		font-size: 1em;
+		color: #FFFFFF;
+		line-height: 1.2;
+		padding: 0.43em 2em;
+		text-decoration: none;
+		margin-bottom: 0.43em;
+		position: relative;
+
+		&::first-letter {
+			color: #FFDD00;
+		}
+
+		u {
+			position: absolute;
+			bottom: 0;
+			left: 4em;
+			font-size: 0.385em;
+			width: calc(100% - 8em);
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow: hidden;
+			transition: width 250ms ease-out;
+
+			@for $i from 1 through 20 {
+				svg:nth-child(#{$i}) {
+					left: -0.35 * ($i - 1) * 1em;
+				}
+			}
+
+			svg {
+				height: 1em;
+				position: relative;
+				flex-shrink: 0;
+				color: #FFDD00;
+			}
+		}
+	}
+}

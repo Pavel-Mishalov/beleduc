@@ -1,0 +1,42 @@
+.header {
+	width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem 14rem;
+
+    &--logo {
+		width: 18.1rem;
+    }
+
+    &--menu {
+    	width: 88.2rem;
+    	flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .header {
+        padding: 3rem 5rem;
+    }
+}
+
+@media screen and (max-width: 1241px) {
+    .header {
+        padding: 3rem 1rem;
+    }
+}
+
+@media screen and (max-width: 1092px) {
+    .header {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+
+        &--logo.logo {
+            width: 17rem;
+            margin-bottom: 2rem;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import "./normalize.scss";
+@import "./font.scss";
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+$device-width: 1365;
+$device-height: 880;
+
+html {
+	font-size: calc(100vw / 546 * 10);
+
+	@media screen and (min-width: 683px) {
+		font-size: calc(100vw / 683 * 10);
+	}
+
+	@media screen and (min-width: 780px) {
+		font-size: calc(100vw / 780 * 10);
+	}
+
+	@media screen and (min-width: 910px) {
+		font-size: calc(100vw / 910 * 10);
+	}
+
+	@media screen and (min-width: 1092px) {
+		font-size: calc(100vw / 1092 * 10);
+	}
+
+	@media screen and (min-width: 1241px) {
+		font-size: calc(100vw / 1241 * 10);
+	}
+
+	@media screen and (min-width: 1365px) {
+		font-size: calc(100vw / #{$device-width} * 10);
+
+		@media screen and (min-aspect-ratio: #{$device-width}/#{$device-height}) {
+			font-size: calc(100vh / #{$device-height} * 10);
+		}
+	}
+}
+
+@import "./components/first-screen/index.scss";
+@import "./components/page/index.scss";
+@import "./components/header/index.scss";
+@import "./components/logo/index.scss";
+@import "./components/menu/index.scss";
+@import "./components/navigation/index.scss";
+@import "./components/contacts/index.scss";
+@import "./components/description/index.scss";
+@import "./components/market-info/index.scss";
+@import "./components/fixed-images/index.scss";
+
+@import "./components/second-screen/index.scss";
+@import "./components/second-page/index.scss";
+@import "./components/tags/index.scss";
+@import "./components/slider/index.scss";
+@import "./components/slider-card/index.scss";
+
+// 110% - 1241
+// 125% - 1092
+// 150% - 910
+// 175% - 780
+// 200% - 682.5
+// 250% - 546
+// 300% - 455
+// 400% - 341.25
+// 500% - 273

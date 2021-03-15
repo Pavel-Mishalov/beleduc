@@ -1,0 +1,134 @@
+.first-screen {
+	width: 100%;
+	background: url('../assets/images/background.png');
+    background-color: #f1f2f6;
+	background-position: top center;
+    background-size: 100% 95%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 6rem;
+
+    &::before {
+    	content: '';
+    	position: absolute;
+    	width: 68.8rem;
+    	height: 68.8rem;
+    	border-radius: 100%;
+    	background-color: rgba(white, 0.1);
+    	top: -14rem;
+    	left: -18rem;
+        z-index: 1;
+    }
+
+    &::after {
+    	content: '';
+    	position: absolute;
+    	width: 41.4rem;
+    	height: 41.4rem;
+    	border-radius: 100%;
+    	background-color: rgba(white, 0.1);
+    	bottom: -12rem;
+    	right: -21rem;
+        z-index: 1;
+    }
+
+    &--page {
+        position: relative;
+        z-index: 5;
+    }
+
+    &--bottom-image {
+        background-image: url('../assets/images/abs-bgc.png');
+        width: 100%;
+        height: 32rem;
+        position: absolute;
+        bottom: 4.3rem;
+        right: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 100% 95%;
+        z-index: 2;
+    }
+
+    &--child-image {
+        width: 136.5rem;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: 17rem;
+            right: 7.5rem;
+            width: 66rem;
+            z-index: 1;
+        }
+    }
+
+    &--fixed-images {
+        z-index: 3;
+    }
+}
+
+@media screen and (max-width: 1241px) {
+    .first-screen {
+        &--child-image {
+            img {
+                bottom: 20rem;
+                right: 30rem;
+                width: 50rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1092px) {
+    .first-screen {
+        &--child-image {
+            img {
+                right: 50rem;
+                width: 40rem;
+            }
+        }
+
+        &--fixed-images {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .first-screen {
+        &--child-image {
+            img {
+                right: 60rem;
+                width: 35rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .first-screen {
+        background-position: top right;
+        background-size: 150% 95%;
+        padding-bottom: 0;
+
+        &--child-image {
+            display: none;
+        }
+
+        &--bottom-image {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 683px) {
+    .first-screen {
+        background-image: linear-gradient(92.6deg, #127CF8 2.41%, #7FB0F4 56.27%, #5ED0FF 102.91%);
+        box-shadow: inset 0px 0.4rem 3rem rgb(0 0 0 / 30%);
+        background-size: 100%;
+    }
+}
